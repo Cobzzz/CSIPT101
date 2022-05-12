@@ -4,7 +4,7 @@ from .serializers import vehiclesSerializer
 from .models import vehicles
 
 class vehicleviewset(viewsets.ModelViewSet):
-    query = vehicles.objects.all().order_by('name')
+    queryset = vehicles.objects.all().order_by('name')
     serializer_class = vehiclesSerializer
 
 
